@@ -12,7 +12,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/forgot").permitAll();
+                .antMatchers("/", "/forgot", "/h2-console/**").permitAll();
+
+        http.csrf().disable();
+        http.headers().frameOptions().disable();
 
     }
 }
