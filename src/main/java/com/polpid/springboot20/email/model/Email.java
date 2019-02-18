@@ -1,4 +1,4 @@
-package com.polpid.springboot20.model;
+package com.polpid.springboot20.email.model;
 
 
 import lombok.Builder;
