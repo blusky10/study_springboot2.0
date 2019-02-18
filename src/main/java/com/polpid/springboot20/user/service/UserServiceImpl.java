@@ -1,6 +1,6 @@
 package com.polpid.springboot20.user.service;
 
-import com.polpid.springboot20.domain.Users;
+import com.polpid.springboot20.user.domain.Users;
 import com.polpid.springboot20.user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,10 +1,10 @@
 package com.polpid.springboot20.user.repository;
 
-import java.util.Optional;
-
-import com.polpid.springboot20.domain.Users;
+import com.polpid.springboot20.user.domain.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
 
 
 @Repository
