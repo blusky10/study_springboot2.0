@@ -1,6 +1,6 @@
-package com.polpid.springboot20.domain;
+package com.polpid.springboot20.user.domain;
 
-import com.polpid.springboot20.model.Email;
+import com.polpid.springboot20.email.model.Email;
 import lombok.Getter;
 
 import javax.persistence.*;
