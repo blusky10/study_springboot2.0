@@ -5,7 +5,7 @@ import com.polpid.springboot20.user.domain.Users;
 import java.util.Optional;
 
 public interface UserService {
-    Optional<Users> findUserByEmail(String email);
+    Optional<Users> findByEmailValue(String email);
     Optional<Users> findUserByResetToken(String resetToken);
     void save(Users user);
 }
