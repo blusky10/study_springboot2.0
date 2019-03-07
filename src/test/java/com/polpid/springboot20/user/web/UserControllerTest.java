@@ -9,14 +9,13 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.mockito.BDDMockito.given;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
@@ -48,7 +47,7 @@ public class UserControllerTest {
         given(this.userController.getUser("test@test.com")).willReturn(new UserDto.Res(this.users));
 
         ResultActions resultActions = this.mockMvc.perform(
-                get("/users/{email:.+}", "test@test.com").accept(MediaType.APPLICATION_JSON_UTF8_VALUE))
+                get("/users/{email}", "test@test.com"))
                 .andDo(print());
 
         resultActions
