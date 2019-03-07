@@ -11,7 +11,6 @@ public class UserDto {
 
     @Getter
     public static class Res{
-        private long id;
 
         private String firstName;
 
@@ -22,7 +21,6 @@ public class UserDto {
 
         @Builder
         public Res(Users users) {
-            this.id = users.getId();
             this.firstName = users.getFirstName();
             this.lastName = users.getLastName();
             this.email = users.getEmail();
